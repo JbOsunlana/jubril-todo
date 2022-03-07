@@ -1,1 +1,4 @@
-web: gunicorn todo_list.wsgi --log-file -
+release: python manage.py makemigrations
+release: python manage.py migrate
+
+web: gunicorn todo_list.wsgi
